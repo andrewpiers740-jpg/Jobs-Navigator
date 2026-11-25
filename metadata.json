@@ -1,0 +1,6 @@
+{
+  "name": "Jobs Navigator - Australian Jobs & Talent Board",
+  "description": "Connecting skilled talent with leading Australian employers across mining, healthcare, trades, technology, logistics, and all major Australian industries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
