@@ -453,6 +453,13 @@ export default function ApplyModal({ job, isOpen, onClose }: ApplyModalProps) {
             {/* STEP 2: Work Rights & Screening Question */}
             {step === 2 && (
               <div className="space-y-5">
+                <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 flex items-start gap-2">
+                  <ShieldCheck className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                  <span>
+                    <strong>Domestic Australian Policy:</strong> Applicants must currently reside in Australia with existing lawful work rights. Offshore applications and visa sponsorships are strictly not accepted.
+                  </span>
+                </div>
+
                 <div>
                   <label className="block text-xs font-semibold text-slate-800 mb-2">
                     Current Australian Work Rights Status *

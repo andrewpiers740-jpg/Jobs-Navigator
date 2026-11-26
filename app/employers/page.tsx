@@ -51,11 +51,18 @@ const EMPLOYER_FAQS: EmployerFaqItem[] = [
     question: 'How does Jobs Navigator screen candidate work rights and prevent unqualified applications?',
     answer: 'Unlike generic open job boards where hundreds of unvetted applicants apply without verified work rights, Jobs Navigator enforces a mandatory four-tier vetting gate before any candidate file reaches your desk:',
     highlights: [
-      'Statutory Work Rights Declaration: Candidates specify whether they are an Australian Citizen, Permanent Resident, New Zealand Citizen (SCV 444), or active Visa holder (subclass 482 TSS, 417/462 Working Holiday, 485 Graduate, or 500 Student).',
+      'Statutory Work Rights Declaration: Candidates specify whether they are an Australian Citizen, Permanent Resident, New Zealand Citizen (SCV 444), or active onshore resident visa holder currently living in Australia. Offshore applications are strictly barred.',
       'Compulsory ID Document Upload: Applicants must provide an Australian Driver Licence (both front & back) or biometric Passport photo page. Incomplete profiles cannot submit.',
       'Sector-Specific Screening Questions: Candidates must answer your mandatory qualification questions (e.g. Cert III Mobile Plant Technology, AHPRA medical license, White Card, High Risk tickets).',
-      'Pre-Interview VEVO Verification: For visa holders, our team confirms work rights, hour limits, and visa validity via the Department of Home Affairs VEVO system before referral.'
+      'Pre-Interview VEVO Verification: For onshore visa holders, our team confirms work rights, hour limits, and visa validity via the Department of Home Affairs VEVO system before referral.'
     ]
+  },
+  {
+    id: 'offshore-visas-policy',
+    category: 'screening',
+    categoryLabel: 'Candidate Screening',
+    question: 'Do you accept offshore applications or require employers to sponsor international visas?',
+    answer: 'No. Jobs Navigator strictly focuses on domestic Australian talent. Every candidate must currently reside in Australia with existing lawful work rights (Citizens, Permanent Residents, NZ Citizens, or onshore visa holders). We do not accept applications from candidates living overseas and do not facilitate international employer sponsorships, ensuring zero visa processing delays or offshore risks for your business.'
   },
   {
     id: 'turnaround-time',

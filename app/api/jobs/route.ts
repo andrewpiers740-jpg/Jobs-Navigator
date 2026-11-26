@@ -7,7 +7,6 @@ export async function GET(request: NextRequest) {
   const sector = searchParams.get('sector') || '';
   const state = searchParams.get('state') || '';
   const workType = searchParams.get('workType') || '';
-  const visa = searchParams.get('visa') === 'true';
   const remote = searchParams.get('remote') === 'true';
 
   let results = [...INITIAL_JOBS];
@@ -32,10 +31,6 @@ export async function GET(request: NextRequest) {
 
   if (workType && workType !== 'all') {
     results = results.filter(j => j.workType === workType);
-  }
-
-  if (visa) {
-    results = results.filter(j => j.visaSponsorshipEligible);
   }
 
   if (remote) {

@@ -81,8 +81,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/jobs?visa=true" className="hover:text-teal-400 transition-colors">
-                  Visa & International Pathways
+                <Link href="/jobs?workType=Full-Time" className="hover:text-teal-400 transition-colors">
+                  Full-Time Australian Roles
                 </Link>
               </li>
               <li>

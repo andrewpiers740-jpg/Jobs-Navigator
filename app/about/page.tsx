@@ -97,9 +97,9 @@ export default function AboutPage() {
               <Globe2 className="w-4 h-4" />
               <span>Geographic Reach</span>
             </div>
-            <p className="text-xl font-extrabold text-slate-900">National & Global</p>
+            <p className="text-xl font-extrabold text-slate-900">All 8 States & Territories</p>
             <p className="text-xs text-slate-500">
-              Serving NSW, VIC, QLD, WA, SA, TAS, ACT, NT plus international skilled migration applicants.
+              Covering NSW, VIC, QLD, WA, SA, TAS, ACT, and NT with dedicated regional and metro focus.
             </p>
           </div>
         </section>
@@ -130,8 +130,8 @@ export default function AboutPage() {
                   desc: 'All advertised roles clearly state base rates and statutory 11.5% Superannuation guarantee, eliminating guesswork for job seekers.'
                 },
                 {
-                  title: '4. International Talent Migration Gateway',
-                  desc: 'We assist qualified overseas candidates and visa holders (TSS 482, Working Holiday 417/462, Graduate 485) to transition smoothly into Australian industries facing domestic skills shortages.'
+                  title: '4. 100% Domestic Australian & Onshore Focus',
+                  desc: 'We focus exclusively on Australian Citizens, Permanent Residents, and onshore residents currently living in Australia with existing valid work rights. Offshore applications and visa sponsorships are strictly excluded, ensuring employers connect only with immediately available, work-ready local talent.'
                 }
               ].map((item, i) => (
                 <div key={i} className="p-4 bg-slate-50 rounded-xl space-y-1">

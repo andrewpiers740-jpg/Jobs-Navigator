@@ -70,7 +70,7 @@ export default function ClientJobApplyWrapper({ job }: ClientJobApplyWrapperProp
         <div className="flex items-start gap-2">
           <ShieldCheck className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
           <div>
-            <strong>Right to Work Check:</strong> Australian Citizen, PR, NZ Citizen, or valid Visa subclass.
+            <strong>Right to Work Check:</strong> Australian Citizen, PR, or Onshore Resident (No offshore applicants accepted).
           </div>
         </div>
 

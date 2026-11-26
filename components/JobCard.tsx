@@ -40,12 +40,6 @@ export default function JobCard({ job, onApply, onSelect }: JobCardProps) {
                 </span>
               </>
             )}
-            {job.visaSponsorshipEligible && (
-              <>
-                <span aria-hidden="true" className="text-slate-300">·</span>
-                <span className="text-emerald-700 font-medium">Visa Eligible</span>
-              </>
-            )}
           </div>
 
           {/* Bookmark Button (SEEK style) */}

@@ -156,7 +156,7 @@ export default function JobDetailModal({ job, isOpen, onClose, onApply }: JobDet
               <span>Right to Work & Identity Verification Notice</span>
             </div>
             <p>
-              Under Australian Workplace Standards and the Migration Act 1958, all successful applicants must have valid Australian work rights (Citizen, Permanent Resident, NZ Citizen, or valid Visa). Jobs Navigator requires compulsory identity verification (Australian Driver Licence or Passport) with 90-day retention under the Australian Privacy Principles.
+              Under Australian Workplace Standards and the Migration Act 1958, all applicants must be currently residing in Australia with verified Australian work rights (Australian Citizen, Permanent Resident, NZ Citizen, or valid onshore visa). Offshore applications and international visa sponsorships are strictly not supported. Jobs Navigator requires compulsory identity verification (Australian Driver Licence or Passport) with 90-day retention under the Australian Privacy Principles.
             </p>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function JobDetailModal({ job, isOpen, onClose, onApply }: JobDet
           <div className="text-xs text-slate-500 hidden sm:block">
             <span>Reference: {job.id}</span>
             <span className="mx-2">·</span>
-            <span>{job.visaSponsorshipEligible ? 'Visa Sponsorship Available' : 'Australian Work Rights Required'}</span>
+            <span>Australian Citizens & Onshore Residents Only</span>
           </div>
 
           <div className="flex items-center gap-3 w-full sm:w-auto justify-end">

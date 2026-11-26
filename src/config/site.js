@@ -77,13 +77,12 @@ export const SITE = {
     'Apprenticeship / Traineeship'
   ],
 
-  // Australian Right to Work Statuses
+  // Australian Right to Work Statuses (Domestic Australian Residents Only)
   workRightsOptions: [
-    { id: 'citizen', label: 'Australian Citizen', description: 'Full unrestricted work rights' },
-    { id: 'permanent_resident', label: 'Permanent Resident (PR)', description: 'Full unrestricted work rights' },
-    { id: 'nz_citizen', label: 'New Zealand Citizen (SCV 444)', description: 'Full unrestricted work rights' },
-    { id: 'temporary_visa', label: 'Temporary / Working Holiday Visa', description: 'Subclass 417, 462, 482, 485 or 500 (with visa work restrictions)' },
-    { id: 'requires_sponsorship', label: 'Requires Visa Sponsorship', description: 'International applicant seeking Australian employer nomination' }
+    { id: 'citizen', label: 'Australian Citizen', description: 'Full unrestricted Australian work rights' },
+    { id: 'permanent_resident', label: 'Permanent Resident (PR)', description: 'Full unrestricted Australian permanent work rights' },
+    { id: 'nz_citizen', label: 'New Zealand Citizen (SCV 444)', description: 'Currently residing in Australia with full work rights' },
+    { id: 'onshore_visa', label: 'Valid Onshore Resident Visa', description: 'Currently living in Australia with existing valid work rights (No offshore applicants)' }
   ],
 
   // Compulsory ID Verification specifications
@@ -110,6 +109,7 @@ export const SITE = {
   compliance: {
     superannuationRate: '11.5%',
     fairWorkNotice: 'All roles advertised comply with National Employment Standards (NES) and relevant Modern Awards under the Fair Work Act 2009.',
-    disclaimer: 'Jobs Navigator acts as a recruitment intermediary and candidate vetting network. Submission of an application does not guarantee employment.'
+    disclaimer: 'Jobs Navigator acts as a recruitment intermediary and candidate vetting network. Submission of an application does not guarantee employment.',
+    domesticPolicyNotice: 'Jobs Navigator exclusively serves Australian Citizens, Permanent Residents, and onshore residents living in Australia. Offshore international applications and visa sponsorships are strictly not supported.'
   }
 };

@@ -66,7 +66,6 @@ export default function HomePage() {
       if (selectedCategoryTab === 'health' && job.sectorId !== 'healthcare-medical') return false;
       if (selectedCategoryTab === 'trades' && job.sectorId !== 'trades-construction') return false;
       if (selectedCategoryTab === 'tech' && job.sectorId !== 'it-digital') return false;
-      if (selectedCategoryTab === 'visa' && !job.visaSponsorshipEligible) return false;
       if (selectedCategoryTab === 'remote' && !job.isRemote) return false;
 
       // Dropdown filters
@@ -330,7 +329,6 @@ export default function HomePage() {
                   { id: 'health', label: 'Healthcare' },
                   { id: 'trades', label: 'Trades & Construction' },
                   { id: 'tech', label: 'IT & Digital' },
-                  { id: 'visa', label: 'Visa Eligible' },
                 ].map((tab) => (
                   <button
                     key={tab.id}
@@ -372,58 +370,58 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* INTERNATIONAL TALENT & VISA SPONSORSHIP SPOTLIGHT */}
+        {/* AUSTRALIAN CITIZENS & LOCAL RESIDENTS TALENT PRIORITY */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14 lg:py-20">
           <div className="bg-[#0F2942] rounded-2xl text-white p-8 sm:p-12 relative overflow-hidden">
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-4">
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-teal-400">
-                  <Globe2 className="w-4 h-4 text-teal-400" />
-                  <span>Relocating to Australia / Visa Pathways</span>
+                  <ShieldCheck className="w-4 h-4 text-teal-400" />
+                  <span>Domestic Australian Talent Commitment</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-                  Looking to Work in Australia From Overseas?
+                  Dedicated Exclusively to Australians & Onshore Residents
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Jobs Navigator assists skilled international candidates with Australian employer nominations, TSS 482 visa sponsorship matching, and working holiday visa transitions (subclass 417 & 462). Submit your verified passport and CV to enter our international priority talent pool.
+                  Jobs Navigator is dedicated strictly to Australian Citizens, Permanent Residents, and onshore individuals currently living in Australia with verified existing work rights. We do not provide international visa sponsorships or accept applications from overseas, ensuring Australian employers connect only with immediately available, work-ready domestic talent.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center gap-4">
                   <button
                     onClick={() => setTalentModalOpen(true)}
                     className="px-5 py-2.5 bg-teal-600 hover:bg-teal-500 text-white rounded-lg text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
                   >
-                    Submit International Expression of Interest
+                    Join Australian Talent Pool
                   </button>
                   <Link
-                    href="/jobs?visa=true"
+                    href="/jobs"
                     className="px-5 py-2.5 border border-slate-500 hover:border-white text-slate-200 hover:text-white rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors"
                   >
-                    Filter Visa-Eligible Roles
+                    Browse All Domestic Roles
                   </Link>
                 </div>
               </div>
 
               <div className="lg:col-span-5 bg-[#0A1C2E] p-6 rounded-xl border border-slate-700/80 space-y-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-teal-400">
-                  Supported Australian Visas
+                  Strict Domestic Eligibility Rules
                 </h4>
                 <ul className="space-y-3 text-xs text-slate-300">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <strong>Subclass 482 (Skills in Demand / TSS):</strong> Employer-sponsored direct talent matching in shortage occupations.
+                      <strong>Australian Citizens & Permanent Residents:</strong> Unrestricted priority matching across all 8 States and Territories.
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <strong>Subclass 417 / 462 (Working Holiday):</strong> 6-month work allocations with regional extension support.
+                      <strong>Currently Residing in Australia:</strong> All applicants must already live in Australia with active local residency.
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                     <div>
-                      <strong>Subclass 485 (Temporary Graduate):</strong> Full unrestricted post-study employment rights across all Australian cities.
+                      <strong>Zero Offshore / Foreign Applicants:</strong> We do not facilitate international visa sponsorships. Unverified overseas applications are automatically filtered out.
                     </div>
                   </li>
                 </ul>

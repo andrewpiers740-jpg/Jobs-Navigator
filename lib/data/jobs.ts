@@ -55,7 +55,7 @@ export const SPOTLIGHT_JOBS: Job[] = [
     confidentialEmployer: true,
     featured: true,
     urgent: true,
-    visaSponsorshipEligible: true,
+    visaSponsorshipEligible: false,
     postedDate: '24 Nov 2026',
     overview: 'Experienced heavy diesel fitter required for a 2:1 FIFO roster servicing mobile open-cut mining fleet (Caterpillar 793 trucks, Komatsu 930E, Hitachi EX3600 excavators) in the Pilbara region.',
     responsibilities: [
@@ -104,7 +104,7 @@ export const SPOTLIGHT_JOBS: Job[] = [
     confidentialEmployer: true,
     featured: true,
     urgent: true,
-    visaSponsorshipEligible: true,
+    visaSponsorshipEligible: false,
     postedDate: '23 Nov 2026',
     overview: 'Compassionate and clinical AHPRA-registered nurse needed for a reputable 110-bed residential aged care facility in inner-eastern Melbourne. Lead a supportive care team delivering resident-focused palliative and complex clinical care.',
     responsibilities: [
@@ -200,7 +200,7 @@ export const SPOTLIGHT_JOBS: Job[] = [
     confidentialEmployer: true,
     featured: true,
     urgent: false,
-    visaSponsorshipEligible: true,
+    visaSponsorshipEligible: false,
     postedDate: '22 Nov 2026',
     overview: 'Build high-performance web applications and resilient microservices for an Australian enterprise SaaS team processing over $40M monthly in compliant transaction workflows.',
     responsibilities: [
@@ -213,7 +213,7 @@ export const SPOTLIGHT_JOBS: Job[] = [
       '3+ years commercial software engineering experience building production web applications.',
       'Strong proficiency in TypeScript, React, Next.js, and modern CSS frameworks.',
       'Solid understanding of relational database modeling, indexing, and SQL.',
-      'Australian working rights or eligibility for TSS 482 visa sponsorship.'
+      'Valid Australian working rights (Citizen, Permanent Resident, or lawful onshore visa holder currently living in Australia).'
     ],
     benefits: [
       'Flexible hybrid working (2 days in modern Fortitude Valley office, 3 days WFH).',
@@ -369,7 +369,7 @@ export const GENERATED_JOBS: Job[] = (rawGeneratedJobs as any[]).map((raw) => {
     confidentialEmployer: true,
     featured: false,
     urgent: raw.workType === 'FIFO',
-    visaSponsorshipEligible: raw.workType === 'FULL_TIME' || raw.workType === 'FIFO',
+    visaSponsorshipEligible: false,
     postedDate: 'Recent',
     overview: `Verified opportunity in ${raw.cityOrSuburb}, ${raw.state} within ${raw.sectorName}. Direct application with Australian right-to-work verification and fast employer review.`,
     descriptionHtml: raw.descriptionHtml,
@@ -379,7 +379,7 @@ export const GENERATED_JOBS: Job[] = (rawGeneratedJobs as any[]).map((raw) => {
       'Operate in accordance with relevant Modern Award guidelines and statutory standards.'
     ],
     requirements: [
-      'Valid Australian work rights (Citizen, Permanent Resident, New Zealand Citizen, or eligible visa).',
+      'Valid Australian work rights (Australian Citizen, Permanent Resident, New Zealand Citizen, or lawful onshore resident visa holder).',
       'Relevant Australian trade qualification, university degree, or proven industry experience.',
       'Compulsory identity verification (Driver Licence front & back OR Passport) under 90-day retention schedule.'
     ],

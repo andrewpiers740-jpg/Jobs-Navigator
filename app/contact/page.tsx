@@ -273,7 +273,7 @@ export default function ContactPage() {
                       <option value="Candidate Application Enquiry">Candidate Application Enquiry</option>
                       <option value="Employer Recruitment Request">Employer Recruitment Request</option>
                       <option value="Identity Verification & Privacy">Identity Verification & Privacy</option>
-                      <option value="International Visa Sponsorship">International Visa Sponsorship</option>
+                      <option value="Australian Employment Enquiry">Australian Employment Enquiry</option>
                       <option value="General Partnerships">General Partnerships</option>
                     </select>
                   </div>

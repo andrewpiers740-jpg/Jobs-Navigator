@@ -40,8 +40,8 @@ export default function HowItWorksPage() {
       a: 'All remuneration figures displayed across Jobs Navigator clearly specify whether Superannuation is exclusive (+ Super) or inclusive. Under Australian statutory legislation, employers must contribute 11.5% compulsory Superannuation into each employee’s nominated fund in addition to base pay.'
     },
     {
-      q: 'Can international candidates without Australian citizenship apply?',
-      a: 'Yes. Candidates holding valid Temporary Skill Shortage (TSS 482) visas, Working Holiday visas (subclass 417 & 462), Temporary Graduate visas (subclass 485), and New Zealand citizens (Special Category Visa 444) are eligible. We also feature employers licensed and prepared to sponsor skilled international professionals under the Core Skills Shortage List.'
+      q: 'Can international candidates living overseas or requiring visa sponsorship apply?',
+      a: 'No. Jobs Navigator is strictly dedicated to Australian Citizens, Permanent Residents, and onshore residents currently living in Australia with valid work rights. We do not accept applications from overseas or facilitate international visa sponsorships. All candidate profiles must hold immediate, lawful right to work within Australia.'
     },
     {
       q: 'How does Jobs Navigator protect candidate privacy from current employers?',

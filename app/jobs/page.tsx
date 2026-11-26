@@ -40,14 +40,12 @@ function JobsContent() {
   const initialSector = searchParams.get('sector') || 'all';
   const initialState = searchParams.get('state') || 'ALL';
   const initialWorkType = searchParams.get('workType') || 'all';
-  const initialVisa = searchParams.get('visa') === 'true';
   const initialRemote = searchParams.get('remote') === 'true';
 
   const [keyword, setKeyword] = useState(initialQ);
   const [selectedSector, setSelectedSector] = useState(initialSector);
   const [selectedState, setSelectedState] = useState(initialState);
   const [selectedWorkType, setSelectedWorkType] = useState(initialWorkType);
-  const [visaOnly, setVisaOnly] = useState(initialVisa);
   const [remoteOnly, setRemoteOnly] = useState(initialRemote);
   const [savedOnly, setSavedOnly] = useState(false);
   const savedJobIds = useSavedJobIds();
@@ -67,7 +65,6 @@ function JobsContent() {
       if (selectedSector !== 'all' && job.sectorId !== selectedSector) return false;
       if (selectedState !== 'ALL' && job.state !== selectedState) return false;
       if (selectedWorkType !== 'all' && job.workType !== selectedWorkType) return false;
-      if (visaOnly && !job.visaSponsorshipEligible) return false;
       if (remoteOnly && !job.isRemote) return false;
       if (savedOnly && !savedJobIds.includes(job.id)) return false;
 
@@ -85,7 +82,7 @@ function JobsContent() {
 
       return true;
     });
-  }, [allJobs, keyword, selectedSector, selectedState, selectedWorkType, visaOnly, remoteOnly, savedOnly, savedJobIds]);
+  }, [allJobs, keyword, selectedSector, selectedState, selectedWorkType, remoteOnly, savedOnly, savedJobIds]);
 
   const displayedJobs = useMemo(() => {
     return filteredJobs.slice(0, visibleCount);
@@ -96,7 +93,6 @@ function JobsContent() {
     setSelectedSector('all');
     setSelectedState('ALL');
     setSelectedWorkType('all');
-    setVisaOnly(false);
     setRemoteOnly(false);
     setSavedOnly(false);
     setVisibleCount(PAGE_SIZE);
@@ -121,7 +117,7 @@ function JobsContent() {
             Browse Australian Jobs ({allJobs.length.toLocaleString()}+ Verified Roles)
           </h1>
           <p className="text-sm text-slate-600 mt-1 max-w-2xl">
-            Explore active positions across all Australian states, regional cities, and remote roles. Each listing includes verified superannuation (+ 11.5% Super) and compulsory right-to-work verification.
+            Explore active positions across all Australian states, regional cities, and remote roles. Strictly open to Australian Citizens, Permanent Residents, and onshore residents currently living in Australia (Offshore applications not accepted).
           </p>
         </div>
 
@@ -213,20 +209,6 @@ function JobsContent() {
                 <span className="text-slate-800 font-semibold">Remote Only</span>
               </label>
 
-              {/* Visa Sponsorship Filter Toggle */}
-              <label className="flex items-center gap-1.5 cursor-pointer bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 transition-colors">
-                <input
-                  type="checkbox"
-                  checked={visaOnly}
-                  onChange={(e) => {
-                    setVisaOnly(e.target.checked);
-                    setVisibleCount(PAGE_SIZE);
-                  }}
-                  className="text-teal-600 focus:ring-teal-500 rounded"
-                />
-                <span className="text-slate-700 font-medium">Visa Sponsorship Eligible</span>
-              </label>
-
               {/* Saved Jobs Filter Toggle */}
               <label className={`flex items-center gap-1.5 cursor-pointer px-2.5 py-1.5 rounded-lg border transition-colors ${
                 savedOnly ? 'bg-amber-50 border-amber-300 text-amber-900 font-semibold' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
@@ -244,7 +226,7 @@ function JobsContent() {
                 <span>Saved Jobs ({savedJobIds.length})</span>
               </label>
 
-              {(keyword || selectedSector !== 'all' || selectedState !== 'ALL' || selectedWorkType !== 'all' || visaOnly || remoteOnly || savedOnly) && (
+              {(keyword || selectedSector !== 'all' || selectedState !== 'ALL' || selectedWorkType !== 'all' || remoteOnly || savedOnly) && (
                 <button
                   onClick={resetFilters}
                   className="flex items-center gap-1 text-teal-700 hover:text-teal-900 font-semibold"
